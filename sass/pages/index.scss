@@ -1,0 +1,83 @@
+.location {
+  background: var(--background-location);
+  color: var(--primary-location);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    margin-right: 1rem;
+  }
+}
+
+.discover {
+  background: var(--background-primary);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
+  h1 {
+    padding: 0 50px;
+  }
+  p {
+    padding: 20px 35px;
+    color: var(--primary-location);
+  }
+  &__button {
+    @include btn;
+  }
+}
+
+.tutorial {
+  padding: 25px 20px;
+  &__list {
+    list-style: none;
+    counter-reset: compteListe;
+  }
+
+  &__element {
+    padding: 20px;
+    margin: 15px 0 15px 15px;
+    border-radius: 20px;
+    background: var(--background-primary);
+    display: flex;
+    align-items: center;
+    &::before {
+      counter-increment: compteListe;
+      content: counter(compteListe) " ";
+      height: 24px;
+      width: 24px;
+      background: var(--primary);
+      border-radius: 100px;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      left: 25px;
+    }
+  }
+  &__icon {
+    margin: 0 26px 0 8px;
+    color: var(--primary-icon);
+  }
+}
+
+.restaurant {
+  .card {
+    @include card;
+  }
+  display: flex;
+  flex-flow: column nowrap;
+  background: var(--background-primary);
+  padding: 40px 20px;
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.new {
+  @include badge;
+}

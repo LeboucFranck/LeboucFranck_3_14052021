@@ -1,0 +1,46 @@
+@mixin card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  height: 250px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-left: 13px;
+  }
+}
+
+@mixin btn {
+  background: red;
+  color: white;
+  border-radius: 50px;
+  padding: 20px 17px;
+  text-align: center;
+}
+
+$tertiary: #99e2d0;
+
+@mixin badge {
+  background: var(--tertiary);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 10px;
+  color: darken($tertiary, 50%);
+  border-radius: 5px;
+}
