@@ -1,6 +1,6 @@
 .location {
-  background: var(--background-location);
-  color: var(--primary-location);
+  background: $background-location;
+  color: $primary-location;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 .discover {
-  background: var(--background-primary);
+  background: $background-primary;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -23,7 +23,7 @@
   }
   p {
     padding: 20px 35px;
-    color: var(--primary-location);
+    color: $primary-location;
   }
   &__button {
     @include btn;
@@ -41,7 +41,7 @@
     padding: 20px;
     margin: 15px 0 15px 15px;
     border-radius: 20px;
-    background: var(--background-primary);
+    background: $background-primary;
     display: flex;
     align-items: center;
     &::before {
@@ -49,7 +49,7 @@
       content: counter(compteListe) " ";
       height: 24px;
       width: 24px;
-      background: var(--primary);
+      background: $primary;
       border-radius: 100px;
       display: flex;
       position: absolute;
@@ -61,7 +61,7 @@
   }
   &__icon {
     margin: 0 26px 0 8px;
-    color: var(--primary-icon);
+    color: $primary-icon;
   }
 }
 
@@ -71,7 +71,7 @@
   }
   display: flex;
   flex-flow: column nowrap;
-  background: var(--background-primary);
+  background: $background-primary;
   padding: 40px 20px;
   h1 {
     margin-bottom: 20px;
@@ -80,4 +80,18 @@
 
 .new {
   @include badge;
+}
+
+
+.icon__back:hover {
+  background: linear-gradient($primary, $secondary);
+}
+.card__icon {
+  font-size: 2rem;
+
+  &:hover {
+    font-weight: bold;
+    mix-blend-mode: lighten;
+    background: white;
+  }
 }

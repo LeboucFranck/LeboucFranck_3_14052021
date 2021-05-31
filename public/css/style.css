@@ -16,24 +16,18 @@ ul {
   list-style: none;
 }
 
-:root {
-  --background-primary: #f6f6f6;
-  --background-footer: #353535;
-  --background-location: #eaeaea;
-  --primary-location: #353535;
-  --primary: #9356dc;
-  --primary-icon: #7e7e7e;
-  --secondary: #ff79da;
-  --tertiary: #99e2d0;
+header {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 header .header__logo {
   font-family: "Shrikhand", sans-serif;
-  text-align: center;
 }
 
 footer {
-  background: var(--background-footer);
+  background: #353535;
   color: white;
   padding: 25px 0 35px 25px;
 }
@@ -51,8 +45,8 @@ footer i {
 }
 
 .location {
-  background: var(--background-location);
-  color: var(--primary-location);
+  background: #eaeaea;
+  color: #353535;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -63,7 +57,7 @@ footer i {
 }
 
 .discover {
-  background: var(--background-primary);
+  background: #f6f6f6;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -76,14 +70,21 @@ footer i {
 }
 .discover p {
   padding: 20px 35px;
-  color: var(--primary-location);
+  color: #353535;
 }
 .discover__button {
-  background: red;
+  background: linear-gradient(#9356dc, #ff79da);
   color: white;
+  font-weight: bold;
   border-radius: 50px;
-  padding: 20px 17px;
+  padding: 12px 18px;
   text-align: center;
+}
+.discover__button:hover {
+  color: white;
+}
+.discover__button:visited {
+  color: white;
 }
 
 .tutorial {
@@ -97,7 +98,7 @@ footer i {
   padding: 20px;
   margin: 15px 0 15px 15px;
   border-radius: 20px;
-  background: var(--background-primary);
+  background: #f6f6f6;
   display: flex;
   align-items: center;
 }
@@ -106,7 +107,7 @@ footer i {
   content: counter(compteListe) " ";
   height: 24px;
   width: 24px;
-  background: var(--primary);
+  background: #9356dc;
   border-radius: 100px;
   display: flex;
   position: absolute;
@@ -117,13 +118,13 @@ footer i {
 }
 .tutorial__icon {
   margin: 0 26px 0 8px;
-  color: var(--primary-icon);
+  color: #7e7e7e;
 }
 
 .restaurant {
   display: flex;
   flex-flow: column nowrap;
-  background: var(--background-primary);
+  background: #f6f6f6;
   padding: 40px 20px;
 }
 .restaurant .card {
@@ -157,13 +158,50 @@ footer i {
 }
 
 .new {
-  background: var(--tertiary);
+  background: #99e2d0;
   position: absolute;
   right: 12px;
   top: 12px;
   padding: 10px;
   color: #1b6150;
   border-radius: 5px;
+}
+
+.icon__back:hover {
+  background: linear-gradient(#9356dc, #ff79da);
+}
+
+.card__icon {
+  font-size: 2rem;
+}
+.card__icon:hover {
+  font-weight: bold;
+  mix-blend-mode: lighten;
+  background: white;
+}
+
+.restaurant__background {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.menu {
+  max-width: 100%;
+  overflow: hidden;
+}
+.menu__title {
+  position: relative;
+}
+.menu__title::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

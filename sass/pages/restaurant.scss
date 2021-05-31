@@ -1,0 +1,23 @@
+.restaurant__background {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.menu {
+  max-width: 100%;
+  overflow: hidden;
+  &__title {
+    position: relative;
+    &::after {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: $ligne;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
