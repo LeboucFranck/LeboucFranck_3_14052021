@@ -33,7 +33,7 @@
     animation: menu__card__loader 0.6s;
     animation-fill-mode: forwards;
     animation-duration: 1.2s;
-    transform: scale(0);
+    transform: translateY(20px);
     &:hover &__confirmation {
       margin-right: -11px;
     }
