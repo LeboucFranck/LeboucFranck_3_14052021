@@ -1,9 +1,16 @@
 header {
-  height: 63px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   .header__logo {
     font-family: "Shrikhand", sans-serif;
   }
+}
+
+.icon__back {
+  position: absolute;
+  font-size: 20px;
+  top: 30px;
+  left: 20px;
 }

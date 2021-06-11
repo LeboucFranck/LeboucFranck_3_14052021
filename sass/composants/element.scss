@@ -49,3 +49,36 @@
   color: darken($tertiary, 50%);
   border-radius: 5px;
 }
+
+@mixin heart {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background: transparent;
+  transition: 10s;
+  &:hover div {
+    background: linear-gradient($primary, $secondary);
+    opacity: 1;
+  }
+  & div {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    transition: 2s;
+    opacity: 0;
+    &:hover {
+    }
+  }
+
+  & i {
+    position: absolute;
+    font-size: 35px;
+    color: black;
+    &:hover {
+      font-weight: bold;
+      mix-blend-mode: lighten;
+      background: white;
+      transition: mix-blend-mode 5s;
+    }
+  }
+}

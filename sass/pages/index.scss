@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .location {
   background: $background-location;
   color: $primary-location;
@@ -59,15 +65,14 @@
       left: 25px;
     }
   }
-  &__icon {
-    margin: 0 26px 0 8px;
-    color: $primary-icon;
-  }
 }
 
 .restaurant {
   .card {
     @include card;
+    &__icon{
+      @include heart;
+    }
   }
   display: flex;
   flex-flow: column nowrap;
@@ -80,18 +85,4 @@
 
 .new {
   @include badge;
-}
-
-
-.icon__back:hover {
-  background: linear-gradient($primary, $secondary);
-}
-.card__icon {
-  font-size: 2rem;
-
-  &:hover {
-    font-weight: bold;
-    mix-blend-mode: lighten;
-    background: white;
-  }
 }

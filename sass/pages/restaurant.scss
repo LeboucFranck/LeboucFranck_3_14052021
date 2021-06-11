@@ -10,6 +10,7 @@
   overflow: hidden;
   &__title {
     position: relative;
+    margin: 15px 0;
     &::after {
       content: "";
       width: 30px;
@@ -19,5 +20,85 @@
       left: 0;
       bottom: 0;
     }
+  }
+
+  &__card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 15px;
+    animation: menu__card__loader 0.6s;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    transform: scale(0);
+    &:hover &__confirmation {
+      margin-right: -11px;
+    }
+    &:hover &__confirmation__icon {
+      transform: rotate(0);
+    }
+    &__description {
+      flex: 1;
+    }
+    &__price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    &__confirmation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 20px;
+      width: 60px;
+      background: $ligne;
+      margin: -11px -71px -11px -0px;
+      transition-duration: 0.5s;
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 100px;
+        height: 25px;
+        width: 25px;
+        color: $ligne;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+      }
+    }
+  }
+}
+
+.carte {
+  background: $background-primary;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  margin-top: -80px;
+  z-index: 1;
+  position: relative;
+  padding: 20px 10px;
+
+  &__top {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+  }
+  &__icon {
+    @include heart;
+    & i:hover {
+      background: $background-primary;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  .animation-#{$i} {
+    animation-delay: #{$i / 10}s;
   }
 }

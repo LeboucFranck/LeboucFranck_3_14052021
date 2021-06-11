@@ -17,13 +17,20 @@ ul {
 }
 
 header {
-  height: 63px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header .header__logo {
   font-family: "Shrikhand", sans-serif;
+}
+
+.icon__back {
+  position: absolute;
+  font-size: 20px;
+  top: 30px;
+  left: 20px;
 }
 
 footer {
@@ -116,10 +123,6 @@ footer i {
   color: white;
   left: 25px;
 }
-.tutorial__icon {
-  margin: 0 26px 0 8px;
-  color: #7e7e7e;
-}
 
 .restaurant {
   display: flex;
@@ -153,6 +156,35 @@ footer i {
   padding-right: 24px;
   padding-left: 13px;
 }
+.restaurant .card__icon {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background: transparent;
+  transition: 10s;
+}
+.restaurant .card__icon:hover div {
+  background: linear-gradient(#9356dc, #ff79da);
+  opacity: 1;
+}
+.restaurant .card__icon div {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  transition: 2s;
+  opacity: 0;
+}
+.restaurant .card__icon i {
+  position: absolute;
+  font-size: 35px;
+  color: black;
+}
+.restaurant .card__icon i:hover {
+  font-weight: bold;
+  mix-blend-mode: lighten;
+  background: white;
+  transition: mix-blend-mode 5s;
+}
 .restaurant h1 {
   margin-bottom: 20px;
 }
@@ -165,19 +197,6 @@ footer i {
   padding: 10px;
   color: #1b6150;
   border-radius: 5px;
-}
-
-.icon__back:hover {
-  background: linear-gradient(#9356dc, #ff79da);
-}
-
-.card__icon {
-  font-size: 2rem;
-}
-.card__icon:hover {
-  font-weight: bold;
-  mix-blend-mode: lighten;
-  background: white;
 }
 
 .restaurant__background {
@@ -193,6 +212,7 @@ footer i {
 }
 .menu__title {
   position: relative;
+  margin: 15px 0;
 }
 .menu__title::after {
   content: "";
@@ -202,6 +222,214 @@ footer i {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.menu__card {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 15px;
+  animation: menu__card__loader 0.6s;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  transform: scale(0);
+}
+.menu__card:hover .menu__card__confirmation {
+  margin-right: -11px;
+}
+.menu__card:hover .menu__card__confirmation__icon {
+  transform: rotate(0);
+}
+.menu__card__description {
+  flex: 1;
+}
+.menu__card__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.menu__card__confirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  width: 60px;
+  background: #99e2d0;
+  margin: -11px -71px -11px 0px;
+  transition-duration: 0.5s;
+}
+.menu__card__confirmation__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 100px;
+  height: 25px;
+  width: 25px;
+  color: #99e2d0;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.carte {
+  background: #f6f6f6;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  margin-top: -80px;
+  z-index: 1;
+  position: relative;
+  padding: 20px 10px;
+}
+.carte__top {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+.carte__icon {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background: transparent;
+  transition: 10s;
+}
+.carte__icon:hover div {
+  background: linear-gradient(#9356dc, #ff79da);
+  opacity: 1;
+}
+.carte__icon div {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  transition: 2s;
+  opacity: 0;
+}
+.carte__icon i {
+  position: absolute;
+  font-size: 35px;
+  color: black;
+}
+.carte__icon i:hover {
+  font-weight: bold;
+  mix-blend-mode: lighten;
+  background: white;
+  transition: mix-blend-mode 5s;
+}
+.carte__icon i:hover {
+  background: #f6f6f6;
+}
+
+.animation-1 {
+  animation-delay: 0.1s;
+}
+
+.animation-2 {
+  animation-delay: 0.2s;
+}
+
+.animation-3 {
+  animation-delay: 0.3s;
+}
+
+.animation-4 {
+  animation-delay: 0.4s;
+}
+
+.animation-5 {
+  animation-delay: 0.5s;
+}
+
+.animation-6 {
+  animation-delay: 0.6s;
+}
+
+.animation-7 {
+  animation-delay: 0.7s;
+}
+
+.animation-8 {
+  animation-delay: 0.8s;
+}
+
+.animation-9 {
+  animation-delay: 0.9s;
+}
+
+@keyframes menu__card__loader {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.spinner {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  background: #9356dc;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  background: #ff79da;
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.spinner .bounce3 {
+  background: #99e2d0;
 }
 
 /*# sourceMappingURL=style.css.map */
