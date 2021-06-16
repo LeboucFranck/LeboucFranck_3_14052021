@@ -8,6 +8,7 @@
 .menu {
   max-width: 100%;
   overflow: hidden;
+  padding: 0px 20px;
   &__title {
     position: relative;
     margin: 15px 0;
@@ -29,11 +30,14 @@
     padding: 10px;
     cursor: pointer;
     overflow: hidden;
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
     margin-bottom: 15px;
-    animation: menu__card__loader 0.6s;
+    animation: menu__card__loader 1.5s;
     animation-fill-mode: forwards;
-    animation-duration: 1.2s;
-    transform: translateY(20px);
+    opacity: 0;
+
+    &::after {
+    }
     &:hover &__confirmation {
       margin-right: -11px;
     }
@@ -82,17 +86,25 @@
   margin-top: -80px;
   z-index: 1;
   position: relative;
-  padding: 20px 10px;
 
   &__top {
     display: flex;
     flex: row;
     justify-content: space-between;
+    padding: 30px 20px 10px 20px;
   }
   &__icon {
     @include heart;
     & i:hover {
       background: $background-primary;
+    }
+  }
+  &__commander {
+    display: flex;
+    justify-content: center;
+    &__button {
+      @include btn;
+      margin: 10px 0 20px 0;
     }
   }
 }
