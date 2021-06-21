@@ -1,4 +1,7 @@
 .restaurant__background {
+  @media only screen and (min-width: 800px) {
+    max-height: 750px;
+  }
   width: 100%;
   max-width: 100%;
   object-fit: cover;
@@ -36,8 +39,6 @@
     animation-fill-mode: forwards;
     opacity: 0;
 
-    &::after {
-    }
     &:hover &__confirmation {
       margin-right: -11px;
     }
@@ -45,6 +46,9 @@
       transform: rotate(0);
     }
     &__description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       flex: 1;
     }
     &__price {
@@ -53,6 +57,7 @@
       align-items: flex-end;
       margin-right: 10px;
       font-weight: bold;
+      padding-left: 7px;
     }
     &__confirmation {
       display: flex;
@@ -80,6 +85,11 @@
 }
 
 .carte {
+  @media only screen and (min-width: 800px) {
+    max-width: 900px;
+    margin: auto;
+    margin-top: -450px;
+  }
   background: $background-primary;
   border-top-right-radius: 35px;
   border-top-left-radius: 35px;

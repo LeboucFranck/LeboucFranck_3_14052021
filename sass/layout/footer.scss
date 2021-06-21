@@ -1,18 +1,25 @@
-footer {
+.footer {
   background: $background-footer;
   color: white;
   padding: 25px 0 35px 25px;
-
-  .footer__logo {
+  @media only screen and (min-width: 768px) {
+    max-width: 900px;
+    margin: auto;
+  }
+  &__logo {
     font-family: "Shrikhand", sans-serif;
   }
-  a:visited,
+  & a:visited,
   a:link {
     color: white;
   }
-  i {
+  & i {
     margin-right: 12px;
     font-size: 15px;
     width: 15px;
   }
+}
+
+footer {
+  background: $background-footer;
 }

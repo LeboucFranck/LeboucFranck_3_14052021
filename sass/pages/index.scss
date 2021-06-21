@@ -1,9 +1,3 @@
-
-
-
-
-
-
 .location {
   background: $background-location;
   color: $primary-location;
@@ -38,6 +32,14 @@
 
 .tutorial {
   padding: 25px 20px;
+  @media only screen and (min-width: 768px) {
+    max-width: 900px;
+    margin: auto;
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
   &__list {
     list-style: none;
     counter-reset: compteListe;
@@ -50,6 +52,11 @@
     background: $background-primary;
     display: flex;
     align-items: center;
+    position: relative;
+    @media only screen and (min-width: 800px) {
+      flex-grow: 1;
+      margin-right: 15px;
+    }
     &::before {
       counter-increment: compteListe;
       content: counter(compteListe) " ";
@@ -62,18 +69,38 @@
       align-items: center;
       justify-content: center;
       color: white;
-      left: 25px;
+      left: -12px;
     }
   }
 }
 
 .restaurant {
+  @media only screen and (min-width: 768px) {
+    max-width: 900px;
+    margin: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  &__card {
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
   .card {
+    @media only screen and (min-width: 768px) {
+      max-width: 350px;
+    }
+    @media only screen and (min-width: 850px) {
+      max-width: 400px;
+    }
     @include card;
-    &__icon{
+    &__icon {
       @include heart;
     }
   }
+
   display: flex;
   flex-flow: column nowrap;
   background: $background-primary;

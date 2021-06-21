@@ -33,22 +33,32 @@ header .header__logo {
   left: 20px;
 }
 
-footer {
+.footer {
   background: #353535;
   color: white;
   padding: 25px 0 35px 25px;
 }
-footer .footer__logo {
+@media only screen and (min-width: 768px) {
+  .footer {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+.footer__logo {
   font-family: "Shrikhand", sans-serif;
 }
-footer a:visited,
-footer a:link {
+.footer a:visited,
+.footer a:link {
   color: white;
 }
-footer i {
+.footer i {
   margin-right: 12px;
   font-size: 15px;
   width: 15px;
+}
+
+footer {
+  background: #353535;
 }
 
 .location {
@@ -103,6 +113,16 @@ footer i {
 .tutorial {
   padding: 25px 20px;
 }
+@media only screen and (min-width: 768px) {
+  .tutorial {
+    max-width: 900px;
+    margin: auto;
+  }
+  .tutorial__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
 .tutorial__list {
   list-style: none;
   counter-reset: compteListe;
@@ -114,6 +134,13 @@ footer i {
   background: #f6f6f6;
   display: flex;
   align-items: center;
+  position: relative;
+}
+@media only screen and (min-width: 800px) {
+  .tutorial__element {
+    flex-grow: 1;
+    margin-right: 15px;
+  }
 }
 .tutorial__element::before {
   counter-increment: compteListe;
@@ -127,7 +154,7 @@ footer i {
   align-items: center;
   justify-content: center;
   color: white;
-  left: 25px;
+  left: -12px;
 }
 
 .restaurant {
@@ -135,6 +162,21 @@ footer i {
   flex-flow: column nowrap;
   background: #f6f6f6;
   padding: 40px 20px;
+}
+@media only screen and (min-width: 768px) {
+  .restaurant {
+    max-width: 900px;
+    margin: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurant__card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 .restaurant .card {
   position: relative;
@@ -145,6 +187,16 @@ footer i {
   background: white;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .restaurant .card {
+    max-width: 350px;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .restaurant .card {
+    max-width: 400px;
+  }
 }
 .restaurant .card img {
   width: 100%;
@@ -212,6 +264,11 @@ footer i {
   object-fit: cover;
   max-height: 300px;
 }
+@media only screen and (min-width: 800px) {
+  .restaurant__background {
+    max-height: 750px;
+  }
+}
 
 .menu {
   max-width: 100%;
@@ -251,6 +308,9 @@ footer i {
   transform: rotate(0);
 }
 .menu__card__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   flex: 1;
 }
 .menu__card__price {
@@ -259,6 +319,7 @@ footer i {
   align-items: flex-end;
   margin-right: 10px;
   font-weight: bold;
+  padding-left: 7px;
 }
 .menu__card__confirmation {
   display: flex;
@@ -290,6 +351,13 @@ footer i {
   margin-top: -80px;
   z-index: 1;
   position: relative;
+}
+@media only screen and (min-width: 800px) {
+  .carte {
+    max-width: 900px;
+    margin: auto;
+    margin-top: -450px;
+  }
 }
 .carte__top {
   display: flex;
