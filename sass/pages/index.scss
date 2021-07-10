@@ -32,7 +32,7 @@
 
 .tutorial {
   padding: 25px 20px;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 800px) {
     max-width: 900px;
     margin: auto;
     &__list {
@@ -46,6 +46,20 @@
   }
 
   &__element {
+    & i {
+      color: $primary-icon;
+      transition: 0.7s;
+    }
+    &:hover {
+      background: #f5edff;
+      i {
+        color: $primary;
+        
+      }
+    }
+    & span {
+      padding-left: 15px;
+    }
     padding: 20px;
     margin: 15px 0 15px 15px;
     border-radius: 20px;
